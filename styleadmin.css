@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 1200px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 12px; /* Mengurangi ukuran font untuk memperkecil tabel */
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 5px 8px; /* Mengurangi padding untuk memperkecil ukuran sel */
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 3px 6px; /* Mengurangi padding tombol */
+    color: white;
+    border-radius: 3px;
+    margin-right: 5px;
+    display: inline-block;
+    font-size: 12px; /* Mengurangi ukuran font tombol */
+}
+
+.btn.update {
+    background-color: #4CAF50;
+}
+
+.btn.delete {
+    background-color: #f44336;
+}
+
+.logout-btn {
+    position: absolute;
+    top: 100px;
+    right: 20px;
+
+}
+
+.btn-logout {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.btn-logout:hover {
+    background-color: #d32f2f;
+}
+.container {
+    position: relative;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Add margin to avoid overlap with the logout button */
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.reservation-button {
+    margin-top: 20px;
+}
+.reservation-button a {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+.reservation-button a:hover {
+    background-color: #45a049;
+}
+

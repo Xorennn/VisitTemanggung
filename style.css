@@ -1,0 +1,757 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  overflow-x: hidden;
+  background-color: #ececec;
+}
+
+/* Navbar */
+
+.logo img {
+  width: 214px;
+}
+
+.logo {
+  width: 50%;
+}
+
+nav {
+  display: flex;
+  background-color: #f0f0f0;
+  justify-content: space-around;
+  padding: 8px 0;
+  align-items: center;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  height: 80px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 30%;
+  justify-content: space-around;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  display: inline-block;
+  position: relative;
+  color: black;
+}
+
+nav ul li a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #50413d;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+nav ul li a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: black;
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: -5px;
+  top: -5px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Hamburger Menu Anim */
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ :nth-child(2) {
+  transform: rotate(45deg) translate(-1px, 0px);
+}
+
+.menu-toggle input:checked ~ :nth-child(4) {
+  transform: rotate(-45deg) translate(-1px, 0px);
+}
+
+.menu-toggle input:checked ~ :nth-child(3) {
+  transform: scale(0);
+}
+
+/* Footer */
+footer {
+  margin-top: 10vh;
+  background-color: #0a0a0a;
+  color: white;
+  padding: 30px 0px 0px 0px;
+  height: 200px;
+}
+
+.footer-logo {
+  margin-right: 60px;
+  position: relative;
+}
+
+.footer-logo img{
+  width: 200px;
+  height: auto;
+}
+
+.footer-content {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; 
+}
+
+.footer-section {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.footer-section .social-link {
+  display: block;
+  margin-top: 5px;
+  text-decoration: none;
+  color: white;
+}
+
+.footer-section .social-link:hover {
+  text-decoration: underline;
+}
+
+.footer-section .social-icon {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  text-align: center;
+}
+
+
+/* HOMEPAGE */
+.main__image {
+  background-size: cover;
+  background-position: center;
+  width: auto;
+  height: 500px;
+}
+.det_main__image {
+  background-size: cover;
+  background-position: center;
+  width: auto;
+  height: 500px;
+}
+
+.abouttmg {
+  padding: 50px 130px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column; /* Change from row to column */
+  align-items: center; /* Center horizontally */
+}
+
+.abouttmg .container {
+  display: flex;
+  gap: 50px;
+  width: 100%;
+}
+
+
+.abouttmg .container .images {
+  background-image: url(images/2024-05-13.jpg);
+  background-size: cover;
+  border-radius: 70px 0px;
+  width: 80%;
+  height: 632px;
+}
+
+.abouttmg .container .abt_text {
+  width: 100%;
+}
+
+.abouttmg .container .text h1 {
+  font-size: 48px;
+}
+
+.abouttmg .container .text p {
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+.home__popularDestination {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+  padding: 0px 50px;
+}
+
+.home__popularDestination h1 {
+  padding: 20px 0px;
+  font-size: 32px;
+}
+
+.home__popularDestination .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home__popularDestination .container .Img__tiles {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-position: center;
+  background-size: cover;
+  width: 354px;
+  height: 388px;
+  border-radius: 20px 20px;
+  margin-bottom: 50px;
+}
+
+.home__popularDestination .container .Img__tiles h5 {
+  color: white;
+  font-size: 26px;
+  padding: 20px;
+}
+
+.second__image {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: white;
+  background-image:linear-gradient(180deg, rgba(0, 0, 0, 0.021) 37.5%, rgba(0, 0, 0, 0.7) 100%), url(images/posong3.jpg);
+  background-size:cover;
+  background-position:center;
+  width: 1015px;
+  height: 310px;
+  border-radius: 25px;
+  margin: auto;
+  font-size: larger;
+}
+
+.second__image p {
+  padding: 0px 20px 20px 20px;
+}
+
+.second__image h2 {
+  padding: 20px 0px 0px 20px ;
+}
+
+/* home galerry */
+.home_gallery {
+  display: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 15px;
+  padding: 0px 50px;
+}
+
+.home_gallery h1 {
+  
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 36px;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+ 
+}
+
+.gallery img {
+  
+  object-fit: cover;
+  border-radius: 10px;
+
+}
+ .large {
+  width: 33%;
+  height: 250px;
+}
+
+.medium {
+  width: 27%;
+  height: 250px;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .abouttmg.container {
+    flex-direction: row;
+  }
+
+.abouttmg.container.images {
+    width: 50%;
+  }
+
+  .home__popularDestination.container.Img__tiles {
+    width: 48%;
+  }
+
+  .large {
+    width: 33%;
+    height: 250px;
+  }
+
+.medium {
+    width: 27%;
+    height: 250px;
+  }
+
+}
+
+
+/* Destinasi Wisata */
+.destinasiWisata__Card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.card {
+  color: white;
+  display: grid;
+  place-items: center;
+  width: 310px;
+  height: 279px;
+  overflow: hidden;
+  border-radius: 0.625rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+}
+
+.card > * {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.card__background {
+  object-fit: cover;
+  max-width: 100%;
+  height: 100%;
+ 
+}
+
+.card__description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; 
+  -webkit-box-orient: vertical;
+  font-size: 14px;
+  line-height: 1.5; 
+  height: calc(1.5em * 3); 
+  margin-bottom: 0px; 
+}
+
+.card__content {
+  --flow-space: 0.9375rem;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: space-between;
+  align-self: flex-end;
+  height: 55%;
+  padding: 12% 1.25rem 1.875rem;
+  background: linear-gradient(
+    180deg,
+    hsla(0, 0%, 0%, 0) 0%,
+    hsla(0, 0%, 0%, 0.3) 10%,
+    hsl(0, 0%, 0%) 100%
+  );
+}
+.card__content {
+  --flow-space: 0.9375rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: flex-end;
+  height: 55%;
+  padding: 12% 1.25rem 1.875rem;
+  background: linear-gradient(
+    180deg,
+    hsla(0, 0%, 0%, 0) 0%,
+    hsla(0, 0%, 0%, 0.3) 10%,
+    hsl(0, 0%, 0%) 100%
+  );
+}
+
+.card__content--container {
+  --flow-space: 1.25rem;
+}
+
+.card__title {
+  position: relative;
+  width: fit-content;
+  width: -moz-fit-content; 
+}
+
+.card__title::after {
+  content: "";
+  position: absolute;
+  height: 0.3125rem;
+  width: calc(100% + 1.25rem);
+  bottom: calc((1.25rem - 0.5rem) * -1);
+  left: -1.25rem;
+  background-color: var(--brand-color);
+}
+
+.card__button {
+  padding: 0.75em 1.6em;
+  width: fit-content;
+  width: -moz-fit-content; 
+  font-variant: small-caps;
+  font-weight: bold;
+  border-radius: 0.45em;
+  border: none;
+  background-color: var(--brand-color);
+  font-family: var(--font-title);
+  font-size: 1.125rem;
+  color: var(--black);
+}
+
+.card__button a{
+  text-decoration: none;
+  padding: 10px 20px;
+  color: white;
+  outline: 2px solid rgb(255, 255, 255);
+  outline-offset: -5px;
+}
+
+/*btn reservasi*/
+.reservation-button {
+  margin-top: 20px; /* Atur margin atas agar tombol tidak terlalu rapat dengan galeri */
+  margin-left: 40px;
+}
+
+.btn-reservation {
+  /* Atur tampilan tombol */
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-reservation:hover {
+  /* Efek hover */
+  background-color: #0056b3;
+}
+
+@media (any-hover: hover) and (any-pointer: fine) {
+  .card__content {
+    transform: translateY(62%);
+    transition: transform 500ms ease-out;
+    transition-delay: 500ms;
+  }
+
+  .card__title::after {
+    opacity: 0;
+    transform: scaleX(0);
+    transition: opacity 1000ms ease-in, transform 500ms ease-out;
+    transition-delay: 500ms;
+    transform-origin: right;
+  }
+
+  .card__background {
+    transition: transform 500ms ease-in;
+  }
+
+  .card__content--container > :not(.card__title),
+  .card__button {
+    opacity: 0;
+    transition: transform 500ms ease-out, opacity 500ms ease-out;
+  }
+
+  .card:hover,
+  .card:focus-within {
+    transform: scale(1.05);
+    transition: transform 500ms ease-in;
+  }
+
+  .card:hover .card__content,
+  .card:focus-within .card__content {
+    transform: translateY(0);
+    transition: transform 500ms ease-in;
+  }
+
+  .card:focus-within .card__content {
+    transition-duration: 0ms;
+  }
+
+  .card:hover .card__background,
+  .card:focus-within .card__background {
+    transform: scale(1.3);
+  }
+
+  .card:hover .card__content--container > :not(.card__title),
+  .card:hover .card__button,
+  .card:focus-within .card__content--container > :not(.card__title),
+  .card:focus-within .card__button {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+    transition-delay: 1000ms;
+  }
+
+  .card:hover .card__title::after,
+  .card:focus-within .card__title::after {
+    opacity: 1;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: opacity 500ms ease-in, transform 500ms ease-in;
+    transition-delay: 500ms;
+  }
+}
+
+.maps_container{
+  display: flex;
+  gap: 20px;
+  padding: 50px;
+}
+
+
+.maps iframe{
+width: 400px;
+height: 668px;
+border-radius: 60px 0px 0px 0px;
+}
+
+.detail_gallery {
+  display: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 15px;
+  padding: 0px 50px;
+}
+
+.detail_gallery h1 {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 36px;
+}
+
+.detailgallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+}
+
+.detailgallery img {
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.detail_gallery-mobile {
+  display: none;
+}
+
+.detailmedium{
+width: 500px;
+height: 350px;
+}
+
+.detaillarge{
+width: 1010px;
+height: 350px;
+}
+
+.detailsmall{
+width: 245px;
+height: 191px;
+}
+.detailsmall1{
+width: 245px;
+height: 191px;
+}
+.detailsmall2{
+width: 245px;
+height: 191px;
+}
+.detailsmall3{
+width: 245px;
+height: 191px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 500px;
+  height: 350px;
+  position: relative;
+  margin: auto;
+}
+
+.kuliner_container {
+  margin: 0px 30px 30px 30px;
+  display: flex;
+  gap: 40px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+.logout-btn {
+  position: absolute;
+  top: 100px;
+  right: 20px;
+
+}
+
+@media screen and (max-width: 600px) {
+/* Mobile */
+.detail_gallery {
+  display: none;
+}
+
+.detail_gallery-mobile {
+  display: none;
+}
+
+}
